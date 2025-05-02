@@ -1,0 +1,16 @@
+{
+    "graphml": "_graph/graph.graphml",
+    "nodes_csv":"_graph/kg_nodes.csv",
+    "oregano_v3":"_graph/OREGANO_V3.tsv",
+    "cleaned_nodes_csv":"_graph/oregano_clenaed_nodes_new.csv",
+    "edges_csv":"_graph/kg_edges.csv",
+    "cleaned_edges_csv": "_graph/kg_edges.csv",
+    "graphlets": "1-kg_processing/graphlet_extraction/graphlets.json",
+    "templates": "_generation_templates/templates.jsonl",
+    "templates_metadata": "_generation_templates/templates_metadata.json",
+    "generation_templates": "_templates/for_generation.json",
+    "figures": "_figures/",
+    "model_paths":"/beegfs/client/default/dl-models/turbomind/",    
+    "llm_outs":"_llm_outs"    
+
+}

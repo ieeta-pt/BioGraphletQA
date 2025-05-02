@@ -1,0 +1,58 @@
+# Ignore Python virtual environments
+venv/
+.env/
+.venv/
+
+# Ignore SLURM output files (e.g., job.out)
+*.out
+
+# Ignore Python bytecode
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore Jupyter notebook checkpoints
+.ipynb_checkpoints/
+
+# Folder contents to ignore (but keep folders tracked)
+# Example placeholder, will update with your folder names
+
+_bioasq/*
+!_bioasq/.gitkeep
+
+_generation_templates/*
+!_generation_templates/templates_metadata.json
+!_generation_templates/.gitkeep
+
+_graph/*
+!_graph/.gitkeep
+
+_llm_outs/*
+!_llm_outs/.gitkeep
+
+_model/*
+!_model/.gitkeep
+
+
+1-kg_processing/data_hydration/hydrate_names/*
+!1-kg_processing/data_hydration/hydrate_names/.gitkeep
+
+1-kg_processing/graphlet_extraction/dump/*
+
+2-prompt_ablation/outputs/*
+2-prompt_ablation/prompt_test_response/*
+
+3-ds_generation/outputs/*
+3-ds_generation/maybe_junk.ipynb
+
+4-ds_filtering/outputs/*
+
+5_llm/unsloth_compiled_cache/*
+5_llm/wandb/*
+5_llm/DUMP/*
+
+6_bioasq_exp/*
+
+
+# But keep the empty folders by adding a .gitkeep file or similar
+
