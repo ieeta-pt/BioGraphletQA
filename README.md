@@ -36,7 +36,7 @@ The dataset generation process consists of **three main stages**:
 ---
 
 
-## 📂 Repository Structure
+## Repository Structure
 
 In the repository usually scripts/notebooks are numbered in the order they should be run. 
 
