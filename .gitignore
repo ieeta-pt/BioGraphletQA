@@ -18,7 +18,6 @@ __pycache__/
 # Example placeholder, will update with your folder names
 
 _bioasq/*
-!_bioasq/.gitkeep
 
 _generation_templates/*
 !_generation_templates/templates_metadata.json
@@ -47,9 +46,11 @@ _model/*
 
 4-ds_filtering/outputs/*
 
-5_llm/unsloth_compiled_cache/*
-5_llm/wandb/*
-5_llm/DUMP/*
+
+5_llm/*
+# 5_llm/unsloth_compiled_cache/*
+# 5_llm/wandb/*
+# 5_llm/DUMP/*
 
 6_bioasq_exp/*
 

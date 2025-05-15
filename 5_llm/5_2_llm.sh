@@ -21,6 +21,51 @@ source ../venv/bin/activate # If you have your venv activated when you submit th
 
 
 
+python unsloth_trainer_bioasq.py \
+    --model_checkpoint "unsloth/gemma-3-12b-it" \
+    --run_name "gemma-3-12b-ft-custom-E0-bioasq-E3-val_new"  
+# up is the new baseline model
+python evaluation_dir.py \
+  --model_dir "../_model/_new_models/gemma-3-12b-ft-custom-E0-bioasq-E3-val_new" \
+  --output_template "E0_new"
+
+
+
+
+python unsloth_trainer_bioasq.py \
+    --model_checkpoint "unsloth/gemma-3-27b-it" \
+    --run_name "gemma-3-27b-ft-custom-E0-bioasq-E3-val_new"  
+# up is the new baseline model
+python evaluation_dir.py \
+  --model_dir "../_model/_new_models/gemma-3-12b-ft-custom-E0-bioasq-E3-val_new" \
+  --output_template "27B_E0"
+
+python unsloth_trainer_bioasq.py \
+    --model_checkpoint "../_model/gemma-3-27b-ft-custom-E3/checkpoint-1873" \
+    --run_name "gemma-3-27b-ft-custom-E3-bioasq-E3-val_new"
+python evaluation_dir.py \
+  --model_dir "../_model/_new_models/gemma-3-12b-ft-custom-E3-bioasq-E3-val_new" \
+  --output_template "27B_E1"
+
+python unsloth_trainer_bioasq.py \
+    --model_checkpoint "../_model/gemma-3-27b-ft-custom-E3/checkpoint-3746" \
+    --run_name "gemma-3-27b-ft-custom-E2-bioasq-E3-val_new"
+python evaluation_dir.py \
+  --model_dir "../_model/_new_models/gemma-3-12b-ft-custom-E2-bioasq-E3-val_new" \
+  --output_template "27B_E2"
+
+
+# python unsloth_trainer_bioasq_new_qa.py \
+#     --model_checkpoint "../_model/gemma-3-12b-ft-custom-E3/checkpoint-1873" \
+#     --run_name "gemma-3-12b-ft-custom-E1-bioasq-E3-val_new"
+# python new_new_eval.py \
+#   --model_dir "../_model/_new_models/gemma-3-12b-ft-custom-E1-bioasq-E3-val_new" \
+#   --output_template "E1"
+
+
+
+
+
 # python unsloth_trainer_bioasq_new_qa.py \
 #     --model_checkpoint "../_model/gemma-3-12b-ft-custom-E3/checkpoint-5619" \
 #     --run_name "gemma-3-12b-ft-custom-E3-bioasq-E3-val_new"
@@ -56,11 +101,11 @@ source ../venv/bin/activate # If you have your venv activated when you submit th
 
 
 
-python unsloth_trainer_merged.py \
-    --model_checkpoint "unsloth/gemma-3-12b-it" \
-    --run_name "gemma-3-12b-ft-mixed-E3"
-python new_new_eval.py \
-  --model_dir "../_model/_new_models/gemma-3-12b-ft-mixed-E3" \
-  --output_template "mixed"
+# python unsloth_trainer_merged.py \
+#     --model_checkpoint "unsloth/gemma-3-12b-it" \
+#     --run_name "gemma-3-12b-ft-mixed-E3"
+# python new_new_eval.py \
+#   --model_dir "../_model/_new_models/gemma-3-12b-ft-mixed-E3" \
+#   --output_template "mixed"
 
 deactivate

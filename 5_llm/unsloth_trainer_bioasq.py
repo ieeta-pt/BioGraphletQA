@@ -105,7 +105,7 @@ trainer = SFTTrainer(
         report_to="wandb",
         logging_steps=1,
         run_name=args.run_name,
-        output_dir=f"{PATH_TO_CONSTANTS}_model/_new_models/{args.run_name}",
+        output_dir=f"{PATH_TO_CONSTANTS}_model/_new_models/new-27B/{args.run_name}",
         save_strategy="epoch",
     ),
 )
