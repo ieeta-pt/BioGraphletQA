@@ -14,10 +14,9 @@ export PYTHONUNBUFFERED=TRUE
 
 module load python
 
-source ../venv/bin/activate # If you have your venv activated when you submit the job, then you do not need to activate/deactivate
+source ../venv/bin/activate 
 
 
 python 1_2_initial_generation.py
-# python DS_GENERATION_testing.py
 
 deactivate

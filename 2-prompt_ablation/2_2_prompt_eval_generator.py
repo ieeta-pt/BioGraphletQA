@@ -9,8 +9,7 @@ PATH_TO_CONSTANTS = "../"
 with open(PATH_TO_CONSTANTS+'constants.json') as f:
     CONSTANTS = json.load(f)
 
-# MODEL  = CONSTANTS['model_paths']+'Llama3-OpenBioLLM-70B-AWQ-INT4-TurboMind'
-# 
+
 MODEL = CONSTANTS['model_paths']+'Nvidia-Llama-3.1-Nemotron-70B-Instruct-HF-AWQ-INT4-TurboMind'
 BACKEND_CONFIG = TurbomindEngineConfig(
                     model_format='awq',
@@ -59,7 +58,6 @@ if __name__ == '__main__':
     for j,i in enumerate(response):
         total_tokens+=i.generate_token_len
         answer_template[j]['text'] = i.text
-    # answer_dict[j] = {'answer': i.text, 'nodes': prompts[i]}
     print(f"Total tokens: {total_tokens}, tps:  {total_tokens/response_time}", flush=True)
     print(f"Total Prompts: {len(prompts)}, average out length:  {total_tokens/len(prompts)}, average time per prompt: {response_time/len(prompts)}, ppd: {86400* (len(prompts)/response_time)}", flush=True )
 

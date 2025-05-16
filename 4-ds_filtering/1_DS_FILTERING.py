@@ -49,8 +49,6 @@ if __name__ == '__main__':
     
     ds = ds[START_INDEX:END_INDEX]
     
-    # batch_ds = {k: ds[k] for k in list(ds.keys())[START_INDEX:END_INDEX]}
-    # batch_ds_keys = list(batch_ds.keys())
             
     prompts = []
     for item in ds:
@@ -72,10 +70,8 @@ if __name__ == '__main__':
     for j,i in enumerate(response):
 
         total_tokens+=i.generate_token_len
-        # answer_template[j+START_INDEX]['text'] = i.text
         ds[j]['filtering_text'] = i.text
         
-    # answer_dict[j] = {'answer': i.text, 'nodes': prompts[i]}
     print(f"Total tokens: {total_tokens}, tps:  {total_tokens/response_time}", flush=True)
     print(f"Total questions: {len(prompts)}, average answer length:  {total_tokens/len(prompts)}, average time per question: {response_time/len(prompts)}, qpd: {86400* (len(prompts)/response_time)}", flush=True )
 

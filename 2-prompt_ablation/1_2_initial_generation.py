@@ -45,7 +45,6 @@ if __name__ == '__main__':
             answer_template[counter] = {'prompt_id':prompt_id, 'id': graphlet['id'],  'graphlet_id': graphlet['graphlet_id'], 'text':""}
             counter+=1
             prompts.append(f"{prompt_template}\n# Graphlet\n## Nodes:\n{''.join(graphlet['graphlet_text'])}\n## Edges:\n{graphlet['edges']}")
-#     break
     t0 = time.time()
     print(f"loading model", flush=True)
     pipe = pipeline(MODEL, backend_config = BACKEND_CONFIG, )

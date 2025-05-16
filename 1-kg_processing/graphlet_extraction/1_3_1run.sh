@@ -14,13 +14,7 @@ module load anaconda3
 export PYTHONUNBUFFERED=TRUE
 
 
-# conda activate gt
-# source /data/home/richard.jonker/storage/work/synthetic-kgqa/venv/bin/activate # If you have your venv activated when you submit the job, then you do not need to activate/deactivate
+conda activate gt
 
 /data/home/richard.jonker/.conda/envs/gt/bin/python3 graphlet_extraction.py
 
-# python data_cleaning.py
-
-
-# cp -r $TMPDIR/ /data/home/richardjonker/work/Pykeen/graphs/
-source deactivate
