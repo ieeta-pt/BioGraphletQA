@@ -63,12 +63,14 @@ This project uses two environments:
 
   ```bash
     conda create -n graph-tool-env -c conda-forge graph-tool=2.92
-    conda activate graph-tool-env```
+    conda activate graph-tool-env
+  ```
 
 - **Main environment** for all other Python packages, installed with:
   
   ```bash
-    pip install -r requirements.txt```
+    pip install -r requirements.txt
+  ```
 
 
 ## Dataset Statistics
