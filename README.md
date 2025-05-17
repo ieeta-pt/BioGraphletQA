@@ -66,7 +66,8 @@ This project uses two environments:
   conda activate graph-tool-env
 ```
 
-Main environment for all other Python packages, installed with:
+- Main environment for all other Python packages, installed with:
+
   ```bash
    pip install -r requirements.txt
 ```
