@@ -1,0 +1,38 @@
+# Core project libraries
+kgw==0.1.0
+pandas==2.2.3
+networkx==3.4.2
+matplotlib==3.10.1
+seaborn==0.13.2
+lmdeploy==0.6.1
+
+# Model-related libraries
+torch==2.3.1
+transformers==4.51.3
+tokenizers==0.21.1
+sentencepiece==0.2.0
+accelerate==1.5.2
+safetensors==0.5.3
+einops==0.8.1
+scipy==1.15.2
+numpy==1.26.4
+
+# Visualization / Notebook / Analysis tools
+jupyter==1.1.1
+jupyterlab==4.3.6
+ipywidgets==8.1.5
+plotly==6.0.1
+pyvis==0.3.2
+
+# Metrics / Evaluation / NLP
+evaluate==0.4.3
+rouge-score==0.1.2
+bert-score==0.3.13
+nltk==3.9.1
+regex==2024.11.6
+
+# Utility & dev tooling (optional, but helpful)
+tqdm==4.67.1
+fire==0.7.0
+rich==13.9.4
+wandb==0.19.9

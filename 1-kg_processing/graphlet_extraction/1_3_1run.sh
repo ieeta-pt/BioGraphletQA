@@ -16,5 +16,5 @@ export PYTHONUNBUFFERED=TRUE
 
 conda activate gt
 
-/data/home/richard.jonker/.conda/envs/gt/bin/python3 graphlet_extraction.py
+~/.conda/envs/gt/bin/python3 graphlet_extraction.py
 
