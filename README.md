@@ -55,7 +55,22 @@ In the repository usually scripts/notebooks are numbered in the order they shoul
 ```
 
 ---
+## Requirements
 
+This project uses two environments:
+
+- **Graph Tool** (version 2.92, commit `fa53df3d`), which must be installed via Conda due to system dependencies:
+
+  ```bash
+  conda create -n graph-tool-env -c conda-forge graph-tool=2.92
+  conda activate graph-tool-env
+```
+
+Main environment for all other Python packages, installed with:
+  ```bash
+   pip install -r requirements.txt
+```
+---
 
 ## Dataset Statistics
 
