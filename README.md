@@ -67,9 +67,8 @@ This project uses two environments:
 
 - **Main environment** for all other Python packages, installed with:
   
-```bash
-    pip install -r requirements.txt
-```
+  ```bash
+    pip install -r requirements.txt```
 
 
 ## Dataset Statistics
