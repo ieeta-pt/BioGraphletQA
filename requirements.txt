@@ -25,6 +25,7 @@ plotly==6.0.1
 pyvis==0.3.2
 
 # Metrics / Evaluation / NLP
+statannotations==0.7.2
 evaluate==0.4.3
 rouge-score==0.1.2
 bert-score==0.3.13
