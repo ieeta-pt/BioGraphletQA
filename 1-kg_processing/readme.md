@@ -63,7 +63,7 @@ The figures below confirm that our reduction strategy did not disproportionately
 
 | Node Type Distribution (Before vs. After)                                    | Node Degree Distribution (Before vs. After)                                 |
 | :---------------------------------------------------------------------------: | :-------------------------------------------------------------------------: |
-| ![Node type distribution.](../_figures/Node_Distribution_red.pdf) | ![Node degree distribution.](../_figures/Degree_Distribution.pdf) |
+| ![Node type distribution.](../_figures/Node_Distribution_red.png) | ![Node degree distribution.](../_figures/Degree_Distribution.png) |
 
 ---
 
@@ -80,4 +80,4 @@ The final preprocessing step is graphlet extraction. The code and associated fil
 
 The `graphlet_extraction` directory contains a `run.sh` script that executes the main Python script (`extract_graphlets.py`). We used the 29 unique, non-isomorphic graphlet shapes containing 3-5 nodes, shown below. The goal was to sample approximately **10,000 instances** of each graphlet shape to serve as the foundation for our QA dataset.
 
-![The 29 graphlet shapes used for extraction.](../_figures/graphlets_updated.pdf)
+![The 29 graphlet shapes used for extraction.](../_figures/graphlets_updated.png)
