@@ -41,7 +41,7 @@ Each entity was looked up between **December 3rd and 19th, 2023**. We ensured al
 
 As shown below, most entity classes have reasonably sized names, with the exception of some outliers in the `compound` and `protein` classes. For example, some long names resulted from knowledge base formatting issues (e.g., ‘Amyloid-beta precursor protein (APP) (ABPP)...’) or are valid but extremely long chemical names.
 
-![Distribution of hydrated name lengths by node type.](../_figures/Distribution.pdf)
+![Distribution of hydrated name lengths by node type.](../_figures/Distribution.png)
 
 ---
 
