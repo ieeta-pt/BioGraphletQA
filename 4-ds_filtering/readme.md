@@ -16,6 +16,9 @@ This is the primary automated quality control step. An LLM is prompted to analyz
 
 * **`1_DS_FILTERING.py`**: The core Python script that runs the LLM-based filtering process.
 * **`1_filtering.sh`**: An example Slurm batch script for executing the filtering on an HPC cluster.
+* **`2_data_processing_v2.ipynb`**: Retrieves core dataset statistics after filtering. 
+* **`3_post_filter_analy.ipynb`**: Some more in depth analysis. 
+
 
 ### Filtering Statistics
 
