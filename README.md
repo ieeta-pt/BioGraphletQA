@@ -88,7 +88,6 @@ This project uses two environments:
 - **QA Format:** Each question is tightly linked to its corresponding graphlet context
 
 
-Of course. Here is the data and header combined into a single Markdown table:
 
 | **ID** | **Total** | **Downsampling** | | **Generated** | **Acceptance** | |
 | :--- | ---: | :--- | ---: | ---: | :--- | ---: |
