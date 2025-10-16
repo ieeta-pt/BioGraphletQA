@@ -13,6 +13,9 @@ with open(PATH_TO_CONSTANTS+'constants.json') as f:
     
     
 MODEL  =  CONSTANTS['model_paths']+'Nvidia-Llama-3.1-Nemotron-70B-Instruct-HF-AWQ-INT4-TurboMind'
+
+MODEL  =  CONSTANTS['model_paths']+'Llama3-OpenBioLLM-70B-AWQ-INT4-TurboMind'
+
 BACKEND_CONFIG = TurbomindEngineConfig(
                     model_format='awq',
                     cache_max_entry_count=0.65,
@@ -76,11 +79,11 @@ if __name__ == '__main__':
     print(f"Total questions: {len(prompts)}, average answer length:  {total_tokens/len(prompts)}, average time per question: {response_time/len(prompts)}, qpd: {86400* (len(prompts)/response_time)}", flush=True )
 
 
-    with open(f"{PATH_TO_CONSTANTS}{CONSTANTS['llm_outs']}/FILTER_DATASET/{START_INDEX:06d}_{END_INDEX:06d}.jsonl", "w") as file:
+    with open(f"{PATH_TO_CONSTANTS}{CONSTANTS['llm_outs']}/FILTER_DATASET_OPENBIOLLM/{START_INDEX:06d}_{END_INDEX:06d}.jsonl", "w") as file:
         for item in ds:
             file.write(json.dumps(item) + "\n")
         
-    with open(f'last_output.txt', 'w') as fp:
+    with open(f'last_output.txt', 'w') as fp: #264373
         fp.write(f"{END_INDEX}")
 
 
