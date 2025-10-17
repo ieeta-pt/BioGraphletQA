@@ -4,6 +4,10 @@ from transformers import AutoTokenizer
 import json
 import re
 
+PATH_TO_CONSTANTS = "../"
+with open(PATH_TO_CONSTANTS+'constants.json') as f:
+    CONSTANTS = json.load(f)
+
 def extract_json_from_promt(text):
     """
     Extracts the last JSON object from a string.
@@ -22,9 +26,7 @@ def extract_json_from_promt(text):
         return False, "No JSON object found in the output."
 
 # --- 1. Define the Model ID ---
-# model_id = "QuantTrio/Qwen3-30B-A3B-Thinking-2507-AWQ"
 model_id = "Qwen/Qwen3-32B-AWQ"
-# model_id = "cpatonn/Llama-3_3-Nemotron-Super-49B-v1_5-AWQ"
 
 
 # --- 2. Load the Tokenizer ---
@@ -37,10 +39,10 @@ except Exception as e:
 print("Tokenizer loaded successfully.")
 
 # --- 3. Load Data ---
-with open("/data/home/richard.jonker/storage/work/synthetic-kgqa/_retrieval/shuffled_data_qa.jsonl") as f:
+with open(PATH_TO_CONSTANTS+CONSTANTS['bm25']) as f:
     data = [json.loads(x) for x in f.readlines()]
 
-with open("/data/home/richard.jonker/storage/work/synthetic-kgqa/_retrieval/last_index.txt") as f:
+with open(PATH_TO_CONSTANTS+"_retrieval/last_index.txt") as f:
     last_index = int(f.readline().strip())
 
 # Using a smaller subset for demonstration purposes if needed
@@ -112,7 +114,7 @@ start_time = time.time()
 try:
     llm = LLM(
         model=model_id,
-        download_dir="/beegfs/client/default/dl-models/hf_models",
+        download_dir=CONSTANTS['model_paths_hf'],
         seed=42,
         trust_remote_code=True,
         max_model_len=8192, #8192
@@ -216,14 +218,14 @@ for original_item in data:
 
 
 # Save the final, merged data to a new file
-output_filename = f"/data/home/richard.jonker/storage/work/synthetic-kgqa/_retrieval/outputs/{last_index}_{last_index+5000}_qwen3_qa.jsonl"
+output_filename = f"/{PATH_TO_CONSTANTS}_retrieval/outputs/{last_index}_{last_index+5000}_qwen3_qa.jsonl"
 with open(output_filename, "w", encoding="utf-8") as f:
     for record in final_output_data:
         json_line = json.dumps(record)
         f.write(json_line + "\n")
         
 
-with open("/data/home/richard.jonker/storage/work/synthetic-kgqa/_retrieval/last_index.txt", "w") as f:
+with open(PATH_TO_CONSTANTS+"_retrieval/last_index.txt", "w") as f:
     f.write(str(last_index+5000) + "\n")
 
 print("========================================")

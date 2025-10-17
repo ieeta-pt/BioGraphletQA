@@ -10,7 +10,9 @@
     "templates_metadata": "_generation_templates/templates_metadata.json",
     "generation_templates": "_templates/for_generation.json",
     "figures": "_figures/",
-    "model_paths":"/beegfs/client/default/dl-models/turbomind/",    
-    "llm_outs":"_llm_outs"    
+    "model_paths":"/beegfs/client/default/dl-models/turbomind/",   
+    "model_paths":"/beegfs/client/default/dl-models/turbomind/",     
+    "llm_outs":"_llm_outs",
+    "bm25": "_retrieval/shuffled_data_qa.jsonl"
 
 }

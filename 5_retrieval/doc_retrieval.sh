@@ -16,9 +16,6 @@ module load python
 module load cuda
 
 
-source ../5_llm/venv-vllm-new/bin/activate
-
-# uv pip install joblib
+source ../venv-vllm/bin/activate
 
 python 1_relevant_documents.py
-# python qa_rephrasing_MCQA.py
