@@ -21,7 +21,7 @@ export INITIAL_MODEL_PATH="michiyasunaga/$MODEL_NAME"
 
 # Define the random seeds for each of the 5 runs
 # 42 123 456 789 1011
-readonly SEEDS=(456)
+readonly SEEDS=(42 123 456 789 1011)
 
 # Define common training parameters
 readonly PER_DEVICE_TRAIN_BATCH_SIZE=16

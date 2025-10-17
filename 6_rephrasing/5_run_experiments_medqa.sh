@@ -20,7 +20,7 @@ export TASK_NAME="medqa_usmle_hf"
 export INITIAL_MODEL_PATH="michiyasunaga/$MODEL_NAME"
 
 # Define the random seeds for each of the 5 runs
-readonly SEEDS=(789 1011)
+readonly SEEDS=(42 123 456 789 1011)
 
 # Define common training parameters
 readonly PER_DEVICE_TRAIN_BATCH_SIZE=2
@@ -100,18 +100,19 @@ for seed in "${SEEDS[@]}"; do
 
     # 1. Initial training run that saves the model
     echo "--- Starting Initial Training for Seed: $seed ---"
-    # DATA=synth_1000
-    # initial_outdir="$SEED_RUNS_DIR/$MODEL_NAME-$DATA-e6"
-    # train_and_evaluate "$INITIAL_MODEL_PATH" "$DATA_DIR/$DATA.json" "$initial_outdir" "epoch" "$seed"
+
+    # synth_1000, synth_5000,synth_10000,synth_20000
+    DATA=synth_1000
+    initial_outdir="$SEED_RUNS_DIR/$MODEL_NAME-$DATA-e6"
+    train_and_evaluate "$INITIAL_MODEL_PATH" "$DATA_DIR/$DATA.json" "$initial_outdir" "epoch" "$seed"
 
     # Set the model path for subsequent runs to the output of the first run for this specific seed
-    # FINE_TUNED_MODEL_PATH="$initial_outdir/model"
+    FINE_TUNED_MODEL_PATH="$initial_outdir/model"
     FINE_TUNED_MODEL_PATH=$INITIAL_MODEL_PATH
     # 2. Subsequent training runs on different data subsets
     echo "--- Starting Subsequent Training Runs for Seed: $seed ---"
-
-# 1000 2500 5000 
-    for train_subset in 7500; do
+ 
+    for train_subset in 1000 2500 5000 7500; do
         subset_outdir="$SEED_RUNS_DIR/$MODEL_NAME-$DATA-train_${train_subset}-e6"
         train_and_evaluate "$FINE_TUNED_MODEL_PATH" "$DATA_DIR/train_${train_subset}.json" "$subset_outdir" "no" "$seed"
     done

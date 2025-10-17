@@ -14,6 +14,8 @@ This repository provides:
   * The complete **BioGraphletQA dataset**, containing **119,856** complex biomedical QA pairs.
   * Scripts to reproduce the experiments and analysis presented in the paper.
 
+
+![Overview of methodology.](../_figures/dataset_overview.png)
 -----
 
 ## The BioGraphletQA Pipeline
