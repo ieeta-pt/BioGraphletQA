@@ -15,7 +15,7 @@ This repository provides:
   * Scripts to reproduce the experiments and analysis presented in the paper.
 
 
-![Overview of methodology.](../_figures/dataset_overview.png)
+![Overview of methodology.](_figures/dataset_overview.png)
 -----
 
 ## The BioGraphletQA Pipeline
