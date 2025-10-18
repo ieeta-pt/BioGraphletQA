@@ -1,6 +1,6 @@
 # BioGraphletQA: Knowledge-Anchored Generation of Complex QA Datasets
 
-This repository contains the official code and resources for the paper **"BioGraphletQA: Knowledge-Anchored Generation of Complex QA Datasets"**.
+This repository contains the official code and resources for the paper **"BioGraphletQA: Knowledge-Anchored Generation of Complex QA Datasets"**. The complete dataset is available on Zenodo: **[https://zenodo.org/records/17381119](https://zenodo.org/records/17381119)**
 
 -----
 
