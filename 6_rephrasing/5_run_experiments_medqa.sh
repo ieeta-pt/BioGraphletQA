@@ -108,7 +108,6 @@ for seed in "${SEEDS[@]}"; do
 
     # Set the model path for subsequent runs to the output of the first run for this specific seed
     FINE_TUNED_MODEL_PATH="$initial_outdir/model"
-    FINE_TUNED_MODEL_PATH=$INITIAL_MODEL_PATH
     # 2. Subsequent training runs on different data subsets
     echo "--- Starting Subsequent Training Runs for Seed: $seed ---"
  
